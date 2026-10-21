@@ -6,12 +6,12 @@ public class Archer extends Combatant {
     }
     @Override
     public String attack() {
-        return getName() + " shoots his bow";
+        return getname() + " shoots his bow";
     }
     implements Special {
         @Override
         public String useSpecialMove() {
-            return getName() +
+            return getname() +
                     " Shoots a deadly arrow!";
         }
 

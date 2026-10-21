@@ -3,17 +3,18 @@ public abstract class Combatant {
     private String name;
     public abstract String attack();
 
+    public Combatant(String name, int hp) {
+        this.hp = hp;
+        this.name = name;
+    }
+
     public int takeDamage(int damage) {
         int result;
         result = hp - damage;
         return result;
     }
-    public String getname(String Name) {
-        if(Name == name) {
-            return name;
-        } else {
-            return null;
-        }
+    public String getname() {
+        return name;
     }
     // the promise — no body
     // shared concrete methods: takeDamage(int), getName(), toString()

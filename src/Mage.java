@@ -8,16 +8,16 @@ public class Mage extends Combatant {
 
     @Override
     public String attack() {
-        return getName() + " hurls a fireball!";
+        return getname(name) + " hurls a fireball!";
     }
-    implements
-
-    Special {
+    implements Special {
         @Override
-        public String useSpecialMove () {
-            return getName() +
-                    " channels an arcane nova!";
+        public String useSpecialMove() {
+            return getname(name) +
+                    " FIREBALL!";
         }
 
     }
+
+
 }
