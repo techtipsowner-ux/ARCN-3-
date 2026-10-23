@@ -18,6 +18,10 @@ public abstract class Combatant {
     }
     // the promise — no body
     // shared concrete methods: takeDamage(int), getName(), toString()
+    public interface Special {
+        String useSpecialMove();
+        // any signer must provide this
+    }
 
 
 }

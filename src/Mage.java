@@ -1,4 +1,4 @@
-public class Mage extends Combatant {
+public class Mage extends Combatant implements Special {
     private int mana;
 
     public Mage(String name, int hp, int mana) {
@@ -8,15 +8,13 @@ public class Mage extends Combatant {
 
     @Override
     public String attack() {
-        return getname(name) + " hurls a fireball!";
+        return getname() + " hurls a fireball!";
     }
-    implements Special {
-        @Override
-        public String useSpecialMove() {
-            return getname(name) +
-                    " FIREBALL!";
-        }
 
+    @Override
+    public String useSpecialMove() {
+        return getname() +
+                " FIREBALL!";
     }
 
 
