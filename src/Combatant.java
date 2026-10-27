@@ -22,6 +22,14 @@ public abstract class Combatant {
         String useSpecialMove();
         // any signer must provide this
     }
+    public static void partyattack() {
+
+        for (Combatant c : party) {
+            System.out.println(c.attack());
+        }
+    }
+
+
 
 
 }
