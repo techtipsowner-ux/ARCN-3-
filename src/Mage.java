@@ -13,9 +13,6 @@ public class Mage extends Combatant implements Special {
 
     @Override
     public String useSpecialMove() {
-        return getname() +
-                " FIREBALL!";
+        return getname() + " FIREBALL!";
     }
-
-
 }

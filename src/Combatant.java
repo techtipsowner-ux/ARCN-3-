@@ -1,35 +1,34 @@
+
 public abstract class Combatant {
-    protected int hp; // children can touch this
+    protected int hp;
     private String name;
-    public abstract String attack();
 
     public Combatant(String name, int hp) {
-        this.hp = hp;
         this.name = name;
+        this.hp = hp;
     }
 
+    public abstract String attack();
+
     public int takeDamage(int damage) {
-        int result;
-        result = hp - damage;
-        return result;
+        hp = hp - Math.max(0, damage);
+
+        if (hp < 0) {
+            hp = 0;
+        }
+        return hp;
     }
+
     public String getname() {
         return name;
     }
-    // the promise — no body
-    // shared concrete methods: takeDamage(int), getName(), toString()
-    public interface Special {
-        String useSpecialMove();
-        // any signer must provide this
-    }
-    public static void partyattack() {
 
-        for (Combatant c : party) {
-            System.out.println(c.attack());
-        }
+    public int getHp() {
+        return hp;
     }
 
-
-
-
+    @Override
+    public String toString() {
+        return name + " has " + hp + " HP";
+    }
 }
